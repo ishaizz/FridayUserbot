@@ -20,11 +20,12 @@ async def _(event):
     thum = mio[0]['title']
     fridayz = mio[0]['id']
     thums = mio[0]['channel']
-    kekme = f"http://img.youtube.com/vi/" + fridayz + "/maxresdefault.jpg"
+    kekme = f"https://img.youtube.com/vi/{fridayz}/hqdefault.jpg"
     await asyncio.sleep(0.6)
     if not os.path.isdir('./music/'):
         os.makedirs('./music/')
     path = Config.TMP_DOWNLOAD_DIRECTORY
+    starknail = wget.download(kekme, path = path)
     stark = (f'youtube-dl --force-ipv4 -q -o "./music/%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 128k ' + mo)
     os.system(stark)
     await myself_stark.edit("`Song Downloaded Sucessfully. Let Me Upload it Here.`")
