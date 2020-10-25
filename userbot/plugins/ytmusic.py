@@ -25,7 +25,7 @@ async def _(event):
     if not os.path.isdir('./music/'):
         os.makedirs('./music/')
     path = Config.TMP_DOWNLOAD_DIRECTORY
-    stark = (f'youtube-dl -q --metadata-from-title -o "./music/%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 128k' + mo)
+    stark = (f'youtube-dl -q --metadata-from-title -o "./music/%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 0' + mo)
     os.system(stark)
     await myself_stark.edit("`Song Downloaded Sucessfully. Let Me Upload it Here.`")
     km = f"./music/{thum}.mp3"
