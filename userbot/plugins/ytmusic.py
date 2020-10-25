@@ -26,7 +26,7 @@ async def _(event):
     if not os.path.isdir('./music/'):
         os.makedirs('./music/')
     path = Config.TMP_DOWNLOAD_DIRECTORY
-    sedlyf = Download(kekme).download()
+    sedlyf = wget.download(kekme, out = path)
     stark = (f'youtube-dl -q --metadata-from-title -o "./music/%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 128k' + mo)
     os.system(stark)
     await myself_stark.edit("`Song Downloaded Sucessfully. Let Me Upload it Here.`")
