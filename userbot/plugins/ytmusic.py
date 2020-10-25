@@ -5,7 +5,6 @@ import wget
 from userbot.uniborgConfig import Config
 import asyncio
 from userbot.utils import sudo_cmd, friday_on_cmd, edit_or_reply
-from downloader_cli.download import Download
 
 @friday.on(friday_on_cmd(pattern="ytmusic ?(.*)"))
 @friday.on(sudo_cmd(pattern="ytmusic ?(.*)", allow_sudo=True))
