@@ -22,8 +22,6 @@ async def _(event):
     fridayz = mio[0]['id']
     thums = mio[0]['channel']
     kekme = f"http://img.youtube.com/vi/" + fridayz + "/maxresdefault.jpg"
-    youtube_video_url = f"{mo}"
-    yt_obj = YouTube(youtube_video_url)
     await asyncio.sleep(0.6)
     if not os.path.isdir('./music/'):
         os.makedirs('./music/')
