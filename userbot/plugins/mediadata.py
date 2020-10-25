@@ -25,4 +25,4 @@ async def _(event):
     title_of_page = "MediaInfo By Friday."
     response = telegraph.create_page(title_of_page, html_content=media_info)
     km = response["path"]
-    await event.edit(f"**MediaInfo** [Here]({km})")
+    await event.edit(f"**MediaInfo** {km}")
