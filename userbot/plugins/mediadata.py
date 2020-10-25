@@ -17,7 +17,7 @@ async def _(event):
             "Reply To a Media."
         )
     file_path = await borg.download_media(reply_message, Config.TMP_DOWNLOAD_DIRECTORY)
-    info = Mediainfo(filename = file_path, cmd = '/app/vendor/ffmpeg/ffprobe')
+    info = MediaInfo(filename = file_path, cmd = '/app/vendor/ffmpeg/ffprobe')
     infoData = info.getInfo()
     media_info = f"<b> MediaInfo </b> \n"
     media_info += f"<code>{infoData}</code>"
