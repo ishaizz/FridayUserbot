@@ -6,7 +6,7 @@ from userbot.uniborgConfig import Config
 from userbot.utils import friday_on_cmd, sudo_cmd
 from MediaInfo import MediaInfo
 from telegraph import Telegraph, exceptions, upload_file
-
+import telegraph 
 @friday.on(friday_on_cmd(pattern="mediainfo (.*)"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
