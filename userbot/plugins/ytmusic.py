@@ -25,7 +25,7 @@ async def _(event):
     if not os.path.isdir('./music/'):
         os.makedirs('./music/')
     path = Config.TMP_DOWNLOAD_DIRECTORY
-    starknail = wget.download(kekme, path = path)
+    sedlyf = wget.download(kekme, out = path)
     stark = (f'youtube-dl --force-ipv4 -q -o "./music/%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 128k ' + mo)
     os.system(stark)
     await myself_stark.edit("`Song Downloaded Sucessfully. Let Me Upload it Here.`")
@@ -36,6 +36,7 @@ async def _(event):
                 force_document=False,
                 allow_cache=False,
                 caption=capy,
+                thumb=sedlyf,
                 performer=thums,
                 supports_streaming=True) 
     await myself_stark.edit("`Song Uploaded. By (C) @FridayOT`")
